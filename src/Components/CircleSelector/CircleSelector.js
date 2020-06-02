@@ -1,9 +1,12 @@
 import React from 'react';
 
+
 const CircleSelector = (props) => (
-    <div className='CircleSlecetor'>
-        CircleSelector
-    </div>
+
+        <button className='Classselector'>
+                  Select Circle
+        </button>
+
 );
 
 export default CircleSelector;

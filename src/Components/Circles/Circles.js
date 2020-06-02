@@ -1,9 +1,7 @@
 import React from 'react';
 
 const Circles = (props) => (
-    <div className='component'>
-        Circles
-    </div>
+    <p className="Circles">Circle</p>
 );
 
 export default Circles;
