@@ -5,17 +5,17 @@ import CircleSelector from './Components/CircleSelector/CircleSelector'
 
 const circles = [1, 2, 3, 4]
 
-state =  {
-  chosen: 1
-}
-
-selector = (circleNum) =>{
-  this.setState({
-    chosen :circleNum
-  })
-}
 
 class App extends Component {
+  state =  {
+    chosen: 1
+  }
+  
+  selector = (circleNum) =>{
+    this.setState({
+      chosen :circleNum
+    })
+  }
   render() {
     return (
       <div className="App">
@@ -25,7 +25,7 @@ class App extends Component {
             circles={circles}
             chosen={this.state.chosen}
             selector={this.handleSelect}
-          />
+            />
           <CircleSelector 
           CircleSelector={CircleSelector}
           />
@@ -35,5 +35,6 @@ class App extends Component {
     );
   }
 }
+
 
 export default App;
