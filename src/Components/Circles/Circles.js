@@ -1,7 +1,11 @@
 import React from 'react';
 
-const Circles = (props) => (
-    <p className="Circles">Circle</p>
-);
+const Circles = (props) => {
+    return(
+        <div className="Circles">
+            
+        </div>
+    )
+}
 
 export default Circles;
