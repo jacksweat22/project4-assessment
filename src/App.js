@@ -3,34 +3,37 @@ import './App.css';
 import Circles from './Components/Circles/Circles';
 import CircleSelector from './Components/CircleSelector/CircleSelector'
 
-const circles = [1, 2, 3, 4]
+const circles = [0,1,2,3]
 
 
 class App extends Component {
+
   state =  {
-    chosen: 1
+    selected: 0
   }
   
-  selector = (circleNum) =>{
+  handleSelect = (circleNumber) =>{
     this.setState({
-      chosen :circleNum
+      selected : circleNumber
     })
   }
+
+
   render() {
     return (
       <div className="App">
         <header className="App-header">UNIT 4 FINAL ASSESSMENT</header>
         <main>
+          <CircleSelector 
+          circles={circles}
+          selected ={this.state.selected}
+          handleSelect ={this.handleSelect}
+          />
           <Circles 
             circles={circles}
-            chosen={this.state.chosen}
-            selector={this.handleSelect}
+            selected ={this.state.selected}
+            handleSelect ={this.handleSelect}
             />
-          <CircleSelector 
-          CircleSelector={CircleSelector}
-          chosen={this.state.chosen}
-          selector={this.handleSelect}
-          />
   
         </main>
       </div>
