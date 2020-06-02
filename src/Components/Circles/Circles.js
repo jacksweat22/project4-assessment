@@ -3,9 +3,13 @@ import React from 'react';
 const Circles = (props) => {
     return(
         <div className="Circles">
-            <div className="">
+            { props.circles.map( (index) => 
+            
+            <div className = {props.selected === index ? 'chosen' : ''}
+            onClick = { () =>  props.handleSelect (index) }>
 
             </div>
+            ) }
         </div>
     )
 }
