@@ -28,6 +28,8 @@ class App extends Component {
             />
           <CircleSelector 
           CircleSelector={CircleSelector}
+          chosen={this.state.chosen}
+          selector={this.handleSelect}
           />
   
         </main>
